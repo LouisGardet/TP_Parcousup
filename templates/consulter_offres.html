@@ -1,0 +1,18 @@
+<!-- parcoursup/templates/consulter_offres.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulter les offres</title>
+</head>
+<body>
+<h1>Offres disponibles</h1>
+<ul>
+    {% for filiere in filieres %}
+        <li><a href="{% url 'postuler' filiere.id %}">{{ filiere.nom }} - {{ filiere.ecole.nom }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
